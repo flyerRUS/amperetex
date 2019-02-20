@@ -1,0 +1,29 @@
+@require '../../common/styles/global-variables.styl'
+
+.privileges
+  padding-top: $default-offset * 6
+  padding-bottom: $default-offset * 11
+  color: $white
+
+  &__title
+    margin-bottom: $default-offset * 7
+
+  &__item
+    margin-bottom: $default-offset * 4.5
+    @media(min-width: $large)
+      width: 455px
+
+  &__item-header
+    margin-bottom: $default-offset * 2
+    display: flex
+    align-items: center
+
+  &__item-icon
+    margin-right: $default-offset * 2.5
+
+  &__item-title
+    font-size: 18px
+    font-family: $font-family-general--light
+    text-transform: uppercase
+    @media(min-width: $small)
+      font-size: 23px

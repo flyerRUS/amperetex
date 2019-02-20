@@ -1,0 +1,78 @@
+@require '../../common/styles/global-variables.styl'
+
+.seo-speech
+  background-color: transparent
+  @media(min-width: $large)
+    background-color: $athens-gray
+
+  &__block
+    transform:translateY(-60px)
+
+  &__right-part
+    background-color: $white
+
+  &__content
+    padding: $default-offset * 4 $default-offset 0 $default-offset
+    @media(min-width: $small)
+      padding: $default-offset * 4 $default-offset * 5 0 $default-offset * 8.5
+    @media(min-width: $medium)
+      padding: $default-offset * 6 $default-offset * 8.5 0 $default-offset * 8.5
+    @media(min-width: $extra-large)
+      padding: $default-offset * 8 $default-offset * 8.5 $default-offset * 4 $default-offset * 8.5
+
+  &__photo
+    margin: auto
+    width: 80%
+    @media(min-width: $large)
+      width: auto
+      margin: 0
+    img
+      height: 100%
+      width: 100%
+      @media(min-width: $large)
+        min-width: 100%
+
+  &__text
+    margin-bottom: $default-offset * 4
+    font-family: $font-family-general--light
+    font-size: 15px
+    line-height: 28px
+
+    &--company-name
+      text-transform: uppercase
+      color: $amaranth
+
+  &__signature-container
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-end
+    @media(min-width: $small)
+      flex-direction: row
+      align-items: flex-start
+      justify-content flex-end
+
+  &__signature-stamp
+    margin-top: $default-offset * 3.5
+    position: relative
+    @media(min-width: $small)
+      margin-right: $default-offset * 3.5
+      margin-top: 0
+
+  &__signature-stamp-text
+    position: absolute
+    top: 45px
+    left: 40px
+    color: $white
+    font-size: 12px
+    font-family: $font-family-general--regular
+    transform: rotate(-20deg)
+
+  &__signature-text
+    font-family: $font-family-general--light
+    font-size: 13px
+    line-height: 28px
+
+    &--name
+      font-size: 14px
+      font-family: $font-family-general--semi-bold
+

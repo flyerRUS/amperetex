@@ -1,0 +1,100 @@
+@require '../../common/styles/global-variables.styl'
+
+.section
+
+  &__title
+    margin-top: $default-offset * 2
+    margin-bottom: $default-offset * 5
+    font-size: 28px
+    font-family: $font-family-general--light
+    text-transform: uppercase
+    &--white-bg
+      padding: $default-offset * 2
+      display: inline
+      background-color: $white
+    &--centered
+      text-align: center
+
+  &__icon-title
+    display: flex
+    justify-content: center
+    align-items: center
+    size(19px, 17px)
+    svg
+      size(100%)
+    &--centered
+      width: auto
+      text-align: center
+
+  &__subtitle
+    margin-bottom: $default-offset * 2
+    font-size: 20px
+    font-family: $font-family-general--medium
+    text-transform: uppercase
+
+  &__part
+    height: 100%
+
+    &--bg-white
+      background-color: $white
+
+    &--right
+      position: relative
+      @media(min-width: $large)
+        padding-left: $default-offset * 9
+      &::after
+        position: absolute
+        top: 0
+        left: 99%
+        content: ''
+        background-color: $white
+        size(1000%, 100%)
+        z-index: 1
+
+  &__text
+    margin-bottom: $default-offset * 4
+    font-size: 14px
+    font-family: $font-family-general--light
+    line-height: 28px
+
+    &--color-firefly
+      color: $firefly
+
+    &--color-white
+      color: $white
+
+    &--color-tropical-blue
+      color: $tropical-blue
+
+    &--color-amaranth
+      color: $amaranth
+
+  &--bg-color
+    &--firefly
+      background-color: $firefly
+    &--amaranth
+      background-color: $amaranth
+    &--athens-gray
+      background-color: $athens-gray
+
+  &--bg-image
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    @media(min-width: $extra-large)
+      background-position: 0% 0%
+
+  &__part-bg-img
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 0
+    overflow: hidden
+    @media(min-width: $large)
+      position: absolute
+      width: 50%
+      z-index: 1
+    img
+      width: 100%
+      min-height: 100%

@@ -1,0 +1,115 @@
+@require '../../common/styles/global-variables.styl'
+
+$slider-item-full-width = 284px
+
+slider-item-active-style()
+  width: $slider-item-full-width
+  height: auto
+  transform: scale(1.1)
+  z-index: 1
+  .use__slider-item-shadow
+    width: $slider-item-full-width
+    height: 230px
+    img
+      width: 100%
+      min-height: 100%
+  .use__slider-item-shadow::after
+    background: transparent
+  .use__slider-item-descr
+    position: absolute
+    box-shadow: 0 3px 15px rgba(16, 39, 70, 0.13)
+    background-color: $white
+  .use__slider-item-descr-list
+    display: block
+  .use__slider-item-name
+    width: 100%
+    margin-top: $default-offset * 2
+    display: inline-block
+    transform: none
+    color: $firefly
+    font-size: 16px
+    font-family: $font-family-general--semi-bold
+    text-align: center
+
+.use
+  padding-top: $default-offset * 6
+
+  &__container
+    overflow: visible
+
+  &__slider-list
+    display: flex
+    justify-content: center
+
+  &__slider-item
+    margin: 0 $default-offset * .25
+    position: relative
+    display: block
+    size(104px, 300px)
+    cursor: pointer
+    transition: .3s
+    @media (max-width: 1250px)
+      padding: 0 $default-offset * 1.5
+      slider-item-active-style()
+      position: relative
+      transform: none
+
+    .use__slider-item-shadow
+      @media (max-width: 1250px)
+        width: 100%
+
+    .use__slider-item-descr
+      @media (max-width: 1250px)
+        position: relative
+        width: 100%
+        box-shadow: none
+
+    &:hover
+      .use__slider-item-shadow::after
+        background: transparent
+
+    &--active
+      slider-item-active-style()
+
+  &__slider-item-shadow
+    position: relative
+    height: 300px
+    overflow: hidden
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background-color: $blur
+      transition: .3s
+
+  &__slider-item-name
+    display: inline-block
+    width: 300px
+    transform: rotate(-90deg) translateY(-60px) translateX(175px)
+    text-align left
+    font-family: $font-family-general--medium
+    font-size: 10px
+    color: $white
+
+  &__slider-item-descr-list
+    padding: $default-offset * 1.5
+    display: none
+    list-style-type: none
+    font-size: 12px
+    font-family: $font-family-general--light
+
+  &__slider-item-descr-item
+    position: relative
+    margin-left: $default-offset * 2
+    margin-bottom: $default-offset * 2
+
+    &::before
+      content: url("./../../../public/images/arrow.svg")
+      position: absolute
+      top: 0.5px
+      left: -15px
+      size(5px)

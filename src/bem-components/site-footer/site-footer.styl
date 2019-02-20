@@ -1,0 +1,36 @@
+@require '../../common/styles/global-variables.styl'
+
+.site-footer
+  padding: $default-offset * 2 0 $default-offset * 5
+  @media(min-width: $large)
+    padding: $default-offset * 5 0
+
+  &__copyright-block
+    margin-top: $default-offset * 3
+    font-size: 10px
+    line-height: 20px
+    font-family: $font-family-general--light
+    color: $firefly
+    text-align: center
+    @media(min-width: $extra-large)
+      margin-top: 0
+      text-align: left
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    text-align: center
+    @media(min-width: $extra-large)
+      padding-right: $default-offset * 3.5
+      text-align: left
+      align-items: flex-end
+
+  &__phone-contact
+    font-size: 15px
+    font-family: $font-family-general--medium
+    line-height: 24px
+    color: $firefly
+
+  &__email-contact
+    font-size: 13px
+    color: $amaranth

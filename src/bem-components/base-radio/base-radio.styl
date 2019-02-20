@@ -1,0 +1,20 @@
+@require "../../common/styles/global-variables.styl"
+
+.base-radio
+  size(200px, 30px)
+
+  &__label
+    size(71px, 30px)
+
+  &__label-value
+    size(100%)
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__input
+    display: none
+
+    &:checked
+      + .base-radio__label-value
+        background-color: $danube

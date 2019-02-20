@@ -1,0 +1,24 @@
+@require '../../common/styles/global-variables.styl'
+
+.calculator
+  position: relative
+  padding: 80px
+  background-color: $firefly
+  color: $white
+  box-shadow: 0px 19px 58px -14px $firefly
+
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 7px
+    background-color: $amaranth
+
+  &__title
+    padding-right: $default-offset * 3.5
+    font-size: 24px
+    line-height: 32px
+    font-family: $font-family-general--light
+    text-transform: uppercase

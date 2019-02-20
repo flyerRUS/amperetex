@@ -1,0 +1,45 @@
+@require '../../common/styles/global-variables.styl'
+
+.first-screen
+  position: relative
+  height: 100 vh
+  color: $white
+
+  &__blur
+    position: absolute
+    top: 0
+    left: 0
+    size(100%)
+    background-color: $blur
+    z-index: 0
+    @media(min-width: $large)
+      display: none
+
+  .container
+    height: 100%
+    position: relative
+
+  &__content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__h1
+    margin-bottom: $default-offset * 3
+    font-size: 28px
+    font-family: $font-family-general--bold
+    text-transform: uppercase
+    @media(min-width: $small)
+      margin-bottom: 0
+      font-size: 50px
+    @media(min-width: $medium)
+      font-size: 64px
+
+  &__h2
+    font-size: 25px
+    font-family: $font-family-general--regular
+    line-height: 45px
+    letter-spacing: -0.3px
+    @media(min-width: $small)
+      font-size: 30px

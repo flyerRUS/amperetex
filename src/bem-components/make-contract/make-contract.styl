@@ -1,0 +1,30 @@
+@require '../../common/styles/global-variables.styl'
+
+.make-contract
+  padding-top: $default-offset * 8
+
+  &__text
+    font-family: $font-family-general--medium
+    font-size: 34px
+    text-align: center
+    @media(min-width: $extra-large)
+      padding-right: $default-offset * 11
+      text-align left
+
+  &__form-button
+    margin-top: $default-offset
+    width: 100%
+    font-size: 13px
+    font-family: $font-family-general--semi-bold
+    @media(min-width: $small)
+      width: 440px
+
+  &__calculator
+    margin: auto
+    width: 100%
+    @media(min-width: $small)
+      width: 80%
+    @media(min-width: $extra-large)
+      margin-left: $default-offset * 7
+      transform: translateY(-60px)
+      width: auto

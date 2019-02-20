@@ -1,0 +1,21 @@
+@require '../../common/styles/global-variables.styl'
+
+.partners
+  padding-top: $default-offset * 6
+
+  &__logos-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    list-style-type: none
+
+  &__logo
+    margin-bottom: $default-offset * 5
+    margin-right: $default-offset * 2
+    width: 25%
+    min-width: 150px
+    text-align: center
+    @media(min-width: $large)
+      margin-right: 0
+      margin-bottom: $default-offset * 3.5

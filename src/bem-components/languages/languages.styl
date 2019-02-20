@@ -1,0 +1,16 @@
+@require '../../common/styles/global-variables.styl'
+
+.languages
+  display: flex
+  width: 135px
+  height: 20px
+
+  &__item
+    size(30px, 20px)
+    cursor: pointer
+
+    &:not(:last-child)
+      margin-right: ($default-offset / 2)
+
+    svg
+      size(100%)

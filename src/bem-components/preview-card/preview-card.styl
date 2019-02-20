@@ -1,0 +1,41 @@
+@require '../../common/styles/global-variables.styl'
+
+.preview-card
+  margin: 0 auto $default-offset * 3
+  padding: $default-offset * 5.5
+  size(290px, 360px)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  border: 1px solid $amaranth
+  background-color: $white
+  @media(min-width: 370px)
+    size(330px, 360px)
+  @media(min-width: $extra-large)
+    margin: 0
+
+  &__logo
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    text-align: center
+
+  &__logo-descr
+    margin-bottom: $default-offset * 2.5
+    font-size: 12px
+    line-height: 20px
+    font-family: $font-family-general--light
+    color: $firefly
+    text-align: center
+
+  &__title
+    font-size: 16px
+    line-height: 26px
+    color: $amaranth
+    font-family: $font-family-general--semi-bold
+    text-align: center
+
+  &__more-info-button
+    display: block
+    text-transform: uppercase

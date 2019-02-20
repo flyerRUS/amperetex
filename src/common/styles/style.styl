@@ -1,0 +1,48 @@
+@require 'global-variables.styl'
+
+/* == COMMON STYLES == */
+
+.container
+  max-width: 1200px!important
+
+*
+  box-sizing: border-box
+
+html
+  width: 100vw
+  overflow-x: hidden
+body
+  width: 100vw
+  font-family: $font-family-general--light
+  color: $firefly
+  overflow-x: hidden
+
+  &::-webkit-scrollbar
+    width: 10px
+
+
+
+  &::-webkit-scrollbar-thumb
+    background-color: $amaranth
+    border-radius: 20px
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+    //outline: 1px solid $firefly
+
+section, header, footer, aside, article, main
+  display: block
+
+ul
+  margin: 0
+  padding: 0
+
+a
+  color: $thunder
+  &:hover
+    text-decoration: none
+    color: $amaranth
+  &:visited
+    color: $big-stone
+
+button
+  outline: none
+  border: none
