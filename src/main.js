@@ -14,7 +14,6 @@ AOS.init({
 });
 
 // common
-import './common/styles/effects.styl'
 import './common/styles/fonts.styl'
 import './common/styles/global-variables.styl'
 import './common/styles/style.styl'
