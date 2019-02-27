@@ -162,8 +162,7 @@
             background-color: $firefly
             text-transform: uppercase
             color: $white
-            letter-spacing: .2em
-            font-size: 3em
+            font-size: 1em
             font-weight: 900
             @media (max-width: $medium)
                 font-size: 1em

@@ -212,14 +212,17 @@
     @require '../common/styles/global-variables.styl'
 
     .cost-calculator
+        height: 690px
         position: relative
         padding: 80px 30px
         background-color: $firefly
         color: $white
         box-shadow: 0 19px 58px -14px $firefly
         @media(min-width: $small)
+            height: 722px
             padding: 80px 50px
         @media(min-width: $medium)
+            height: 648px
             padding: 80px
 
         &::before

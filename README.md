@@ -1,5 +1,7 @@
 # amperetex
 
+Тестовое задание для компании BlueShift.
+
 ## Project setup
 ```
 npm install

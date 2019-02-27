@@ -1,9 +1,11 @@
 @require '../../common/styles/global-variables.styl'
 
 .partners
-  padding-top: $default-offset * 6
-
+  padding: $default-offset * 6 0 $default-offset * 6
+  @media(min-width: $large)
+    padding: $default-offset * 6 0 $default-offset * 9
   &__logos-list
+    margin-top: $default-offset * 8
     display: flex
     flex-wrap: wrap
     justify-content: center

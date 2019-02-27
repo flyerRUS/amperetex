@@ -3,22 +3,30 @@
 $slider-item-full-width = 284px
 
 slider-item-active-style()
-  width: $slider-item-full-width
-  height: auto
-  transform: scale(1.1)
+  position: absolute
+  left: 0
   z-index: 1
+  width: $slider-item-full-width
+  transform: scale(1.1)
+  @media (max-width: 1250px)
+    position: relative
+    width: 100%
   .use__slider-item-shadow
     width: $slider-item-full-width
     height: 230px
-    img
+    @media (max-width: 1250px)
       width: 100%
-      min-height: 100%
+  img
+    width: 100%
+    min-height: 100%
   .use__slider-item-shadow::after
     background: transparent
   .use__slider-item-descr
     position: absolute
     box-shadow: 0 3px 15px rgba(16, 39, 70, 0.13)
     background-color: $white
+    @media (max-width: 1250px)
+      position: relative
   .use__slider-item-descr-list
     display: block
   .use__slider-item-name
@@ -30,6 +38,8 @@ slider-item-active-style()
     font-size: 16px
     font-family: $font-family-general--semi-bold
     text-align: center
+  .use__slider-item-shadow::after
+    background: transparent
 
 .use
   padding-top: $default-offset * 6
@@ -49,10 +59,9 @@ slider-item-active-style()
     cursor: pointer
     transition: .3s
     @media (max-width: 1250px)
-      padding: 0 $default-offset * 1.5
-      slider-item-active-style()
-      position: relative
-      transform: none
+      margin: 0
+      padding: 0 $default-offset $default-offset * 1.5 $default-offset
+      height: auto
 
     .use__slider-item-shadow
       @media (max-width: 1250px)
@@ -65,17 +74,35 @@ slider-item-active-style()
         box-shadow: none
 
     &:hover
-      .use__slider-item-shadow::after
-        background: transparent
+      @media(min-width: 1251px)
+        &:last-child
+          .use__slide
+            left: -200px
+        &_first-child
+          .use__slide
+            left: 170px
+        .use__slide
+          slider-item-active-style()
 
-    &--active
+  &__fake-slide
+    display: block
+    position: relative
+    size(104px, 300px)
+    @media (max-width: 1250px)
+      display: none
+
+  &__slide
+    position: absolute
+    top: 0
+    size(100%)
+    @media (max-width: 1250px)
       slider-item-active-style()
+      transform: none
 
   &__slider-item-shadow
     position: relative
     height: 300px
     overflow: hidden
-
     &::after
       content: ''
       position: absolute
@@ -106,7 +133,6 @@ slider-item-active-style()
     position: relative
     margin-left: $default-offset * 2
     margin-bottom: $default-offset * 2
-
     &::before
       content: url("./../../../public/images/arrow.svg")
       position: absolute
